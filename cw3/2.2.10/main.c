@@ -5,12 +5,12 @@ int main()
 {
     int n;
     scanf("%d", &n);
+     int suma;
     for(int i=n; i>=0; i--)
     {
         if(i<n)
         {
-          int suma;
-            suma = *i+*i;
+         suma *=i;
             printf("%d\n", suma);
 
         }
