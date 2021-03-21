@@ -8,5 +8,9 @@ void *rezerwacja_pamieci(unsigned int n)
 
 int main()
 {
+    int x=4;
+    printf("%d\n", x);
+    rezerwacja_pamieci(x);
+    printf("%#010x\n", &x);
     return 0;
 }
