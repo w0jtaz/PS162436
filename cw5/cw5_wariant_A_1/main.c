@@ -2,12 +2,11 @@
 #include <stdlib.h>
 
 
-int foo(int **a, int **b)
+int foo(int *a, int *b)
 {
-    int *temp = *a;
+    int temp = *a;
     *a = *b;
-    *b = *temp;
-
+    *b = temp;
 
 }
 
@@ -18,14 +17,11 @@ int main()
     scanf("%d", &a);
     printf("Podaj liczbe b: ");
     scanf("%d", &b);
-    printf("Adres liczby a: ");
-    printf("%p\n", &a);
-    printf("Adres liczby b: ");
-    printf("%p\n", &b);
+
     foo(&a, &b);
-    printf("Adres liczby a: ");
-    printf("%p\n", &a);
-    printf("Adres liczby b: ");
-    printf("%p\n", &b);
+    printf("Wartosc a: ");
+    printf("%d\n", a);
+    printf("Wartosc b: ");
+    printf("%d\n", b);
     return 0;
 }
