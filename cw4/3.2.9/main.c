@@ -8,6 +8,8 @@ void *rezerwacja_pamieci()
 
 int main()
 {
+    printf("%d\n", sizeof(int));
+    printf("%p\n", rezerwacja_pamieci());
     return 0;
 }
 

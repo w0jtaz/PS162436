@@ -3,8 +3,7 @@
 
 void foo(int n, int *w)
 {
-    int temp = n;
-    *w = temp;
+    *w = n;
 }
 
 int main()
