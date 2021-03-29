@@ -1,21 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int funkcja(int n)
+int funkcja(int k)
 {
-    if (n==0 || n==1)
+    if (k==0 || k==1)
     {
         return 2;
     }
-    if (n>0 || n%2==0)
+    if (k==0 || k%2==0)
     {
-        return funkcja(n-1)+n-1;
+        return funkcja((k/2)-1)+k/2;
     }
-    if (n>0 || n%2!=0)
+    if (k>0 || k%2!=0)
     {
-        return 2*funkcja(2*n) -n;
+        return 2*funkcja(2*(k/2)) -k/2;
     }
-
 }
 
 int main()
@@ -30,6 +29,5 @@ int main()
     printf("%d\n",funkcja(7));
     printf("%d\n",funkcja(8));
     printf("%d\n",funkcja(9));
-    printf("%d\n",funkcja(10));
     return 0;
 }
