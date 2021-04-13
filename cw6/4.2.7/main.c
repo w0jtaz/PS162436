@@ -16,7 +16,6 @@ int fooA(int n, int tab1[n], int tab2[n], int tab3[n])
     {
         tab3[i] += tab1[i]+tab2[i];
     }
-    return tab3[n];
 }
 
 int fooB(int n, int tab4[n], int tab5[n], int tab6[n])
@@ -32,7 +31,6 @@ int fooB(int n, int tab4[n], int tab5[n], int tab6[n])
             tab6[i] += tab5[i];
         }
     }
-    return tab6[n];
 }
 
 int fooC(int n, int tab7[n], int tab8[n], int tab9[n])
@@ -40,14 +38,13 @@ int fooC(int n, int tab7[n], int tab8[n], int tab9[n])
     int pom7[n]; int pom8[n]; int pom9[n];
     for(int i=0; i<n; i++)
     {
-        tab7[i] = pom7[i];
-        tab8[i] = pom8[i];
-        tab9[i] = pom9[i];
+        pom7[i] = tab7[i];
+        pom8[i] = tab8[i];
+        pom9[i] = tab9[i];
         tab8[i] = tab7[i];
         tab9[i] = pom8[i];
         tab7[i] = pom9[i];
     }
-    return tab7[n];tab8[n];tab9[n];
 }
 
 int main()
@@ -83,7 +80,6 @@ int main()
     wyswietl(5,tab7);
     wyswietl(5,tab8);
     wyswietl(5,tab9);
-    //fooC nie dzia³a jak nale¿y, do poprawy
 
     return 0;
 }

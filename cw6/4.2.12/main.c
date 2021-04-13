@@ -41,19 +41,63 @@ int fooC(int n, int tab[n])
     }
 }
 
+void fooD(int n, int tab[])
+{
+	int i, j, temp;
+	for (i = 0; i<n-1; i++)
+    {
+        for (j=0; j<n-1-i; j++)
+        {
+            if (tab[j] > tab[j+1])
+            {
+                temp = tab[j+1];
+                tab[j+1] = tab[j];
+                tab[j] = temp;
+            }
+        }
+    }
+}
+void fooE(int n, int tab[])
+{
+	int i, j, temp;
+	for (i = 0; i<n-1; i++)
+    {
+        for (j=0; j<n-1-i; j++)
+        {
+            if (tab[j] < tab[j+1])
+            {
+                temp = tab[j+1];
+                tab[j+1] = tab[j];
+                tab[j] = temp;
+            }
+        }
+    }
+}
+
 int main()
 {
     int tab[5] = {1,2,3,4,5};
     wyswietl(5, tab);
-    printf("\n");
     fooA(5, tab);
     wyswietl(5, tab);
     printf("\n");
+
     fooB(5, tab);
     wyswietl(5, tab);
-    printf("\n");
     fooC(5, tab);
     wyswietl(5, tab);
+    printf("\n");
+
+    int tab1[5] = {5,1,3,4,2};
+    wyswietl(5, tab1);
+    fooD(5, tab1);
+    wyswietl(5, tab1);
+    printf("\n");
+
+    int tab2[5] = {1,5,3,2,4};
+    wyswietl(5, tab2);
+    fooE(5, tab2);
+    wyswietl(5, tab2);
 
     return 0;
 }
